@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue-Eyed Islanders | Logic & Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+
+    <header class="puzzle-header">
+      <p class="eyebrow">Logic · Common knowledge · Induction</p>
+      <h1>Blue-Eyed Islanders</h1>
+      <p class="subtitle">
+        A puzzle about what everyone knows, and what everyone knows that everyone knows.
+      </p>
+    </header>
+
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+          <p>
+            On an island, there are people with various eye colors. Everyone can see everyone else's eye color,
+            but no one can see their own. There are no mirrors, photographs, or reflective surfaces, and the islanders
+            never discuss eye color.
+          </p>
+          <p>
+            The islanders are perfect logicians. If an islander ever deduces their own eye color with certainty,
+            they must leave the island at midnight that same day.
+          </p>
+          <p>
+            One day, an outsider arrives and publicly announces: “At least one person on this island has blue eyes.”
+          </p>
+          <p>
+            Suppose there are exactly 100 blue-eyed islanders. What happens?
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose there is one blue-eyed islander</summary>
+        <div class="detail-body">
+          <p>
+            Begin with the smallest possible version. If there is only one blue-eyed islander, that person sees
+            no one else with blue eyes.
+          </p>
+          <p>
+            After the outsider says that at least one islander has blue eyes, the lone blue-eyed islander can infer
+            that they must be the one. They leave at midnight on the first day.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose there are two blue-eyed islanders</summary>
+        <div class="detail-body">
+          <p>
+            Each blue-eyed islander sees exactly one other blue-eyed person.
+          </p>
+          <p>
+            Each thinks: “If I do not have blue eyes, then that person is the only blue-eyed islander, and they will
+            leave on the first night.”
+          </p>
+          <p>
+            When nobody leaves on the first night, both realize the same thing: the other blue-eyed person must have
+            seen someone else with blue eyes. Therefore each concludes that they themselves have blue eyes.
+          </p>
+          <p>
+            Both leave on the second night.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose there are three blue-eyed islanders</summary>
+        <div class="detail-body">
+          <p>
+            Each blue-eyed islander sees two blue-eyed people.
+          </p>
+          <p>
+            Each can reason about what would happen if there were only two. If there were only two blue-eyed islanders,
+            those two would leave on the second night.
+          </p>
+          <p>
+            When nobody leaves on the second night, each realizes there must be more than two blue-eyed islanders.
+            Since each sees exactly two others, each concludes that they are the third.
+          </p>
+          <p>
+            All three leave on the third night.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>General case</summary>
+        <div class="detail-body">
+          <p>
+            The pattern continues. If there are <em>n</em> blue-eyed islanders, each sees <em>n − 1</em> blue-eyed
+            people and waits to see whether those people leave on night <em>n − 1</em>.
+          </p>
+          <p>
+            When they do not, each realizes there must be one additional blue-eyed person. Since each can account for
+            only <em>n − 1</em> others, each concludes that they themselves have blue eyes.
+          </p>
+          <p>
+            Therefore, if there are 100 blue-eyed islanders, all 100 leave on the 100th night.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete explanation</summary>
+        <div class="detail-body">
+          <p>
+            The key is not that the outsider tells anyone a new visible fact. Every islander can already see that
+            blue-eyed people exist, assuming there is more than one. What changes is that the fact becomes public
+            common knowledge.
+          </p>
+          <p>
+            Before the announcement, each person may know that blue-eyed people exist, but the layers of mutual
+            knowledge are not guaranteed. After the announcement, everyone knows that everyone heard the same fact,
+            and everyone knows that everyone knows it, and so on.
+          </p>
+          <p>
+            This shared starting point allows the inductive countdown to begin. The absence of departures on each
+            night becomes new information. Night 1 rules out the one-blue-eyed-person case. Night 2 rules out the
+            two-blue-eyed-person case. Night 3 rules out the three-person case, and so forth.
+          </p>
+          <div class="callout">
+            With 100 blue-eyed islanders, the first 99 nights pass without departures. On the 100th day, each blue-eyed
+            islander realizes that the only remaining possibility is that they are also blue-eyed. They all leave that night.
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>What this puzzle illustrates</summary>
+        <div class="detail-body">
+          <p>
+            This puzzle illustrates the power of common knowledge. The announcement does not merely transmit a fact;
+            it synchronizes the islanders' reasoning. Once everyone has the same public starting point, the passage of
+            time itself becomes informative.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <a class="back-link" href="../index.html">← Back to collection</a>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

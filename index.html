@@ -4,175 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logic & Reasoning</title>
-
-  <style>
-    :root {
-      --bg: #f7f3ec;
-      --paper: #fffaf3;
-      --text: #252321;
-      --muted: #6f6860;
-      --line: #d8cec0;
-      --accent: #243b53;
-      --accent-soft: #e8edf2;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 72px 24px 96px;
-    }
-
-    header {
-      margin-bottom: 64px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 40px;
-    }
-
-    .eyebrow {
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      line-height: 0.95;
-      font-weight: 500;
-      margin: 0 0 28px;
-      letter-spacing: -0.04em;
-    }
-
-    .intro {
-      font-size: 1.22rem;
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0;
-    }
-
-    .note {
-      margin-top: 28px;
-      max-width: 680px;
-      font-size: 1rem;
-      color: var(--text);
-      background: var(--paper);
-      border-left: 3px solid var(--accent);
-      padding: 18px 22px;
-    }
-
-    section {
-      margin-top: 52px;
-    }
-
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      font-size: 1.9rem;
-      margin: 0 0 18px;
-      letter-spacing: -0.02em;
-    }
-
-    .category-description {
-      color: var(--muted);
-      margin: 0 0 20px;
-      max-width: 640px;
-    }
-
-    .puzzle-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .puzzle-link {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: baseline;
-      text-decoration: none;
-      color: var(--text);
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
-      transition: color 180ms ease, padding-left 180ms ease;
-    }
-
-    .puzzle-link:hover {
-      color: var(--accent);
-      padding-left: 8px;
-    }
-
-    .puzzle-title {
-      font-size: 1.12rem;
-      font-weight: 600;
-    }
-
-    .puzzle-subtitle {
-      display: block;
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 400;
-      margin-top: 4px;
-    }
-
-    .arrow {
-      color: var(--muted);
-      transition: transform 180ms ease;
-    }
-
-    .puzzle-link:hover .arrow {
-      transform: translateX(4px);
-      color: var(--accent);
-    }
-
-    footer {
-      margin-top: 72px;
-      padding-top: 28px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 640px) {
-      main {
-        padding: 48px 20px 72px;
-      }
-
-      header {
-        margin-bottom: 48px;
-      }
-
-      .puzzle-link {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-
-      .arrow {
-        display: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <main>
-    <header>
-      <div class="eyebrow">Interactive puzzle collection</div>
-      <h1>Logic & Reasoning</h1>
-      <p class="intro">
-        A curated collection of classic puzzles in logic, probability, and game theory.
-      </p>
+  <main class="site">
+    <header class="hero">
+      <p class="eyebrow">Interactive puzzle collection</p>
+      <h1>Logic &amp; Reasoning</h1>
+      <p class="intro">A curated collection of classic puzzles in logic, probability, and game theory.</p>
       <p class="note">
         These puzzles are designed to be explored rather than simply solved. Each begins with
         the full scenario, then unfolds through a sequence of simpler perspectives before
@@ -180,110 +19,46 @@
       </p>
     </header>
 
-    <section>
+    <section class="category">
       <h2>Logic</h2>
-      <p class="category-description">
-        Puzzles about knowledge, certainty, truth, and the structure of deduction.
-      </p>
-
+      <p>Puzzles about knowledge, certainty, truth, and the structure of deduction.</p>
       <div class="puzzle-list">
-        <a class="puzzle-link" href="#">
+        <a class="puzzle-link" href="puzzles/blue-eyed-islanders.html">
           <span>
-            <span class="puzzle-title">Blue-Eyed Islanders</span>
-            <span class="puzzle-subtitle">What everyone knows, and what everyone knows that everyone knows.</span>
+            <strong>Blue-Eyed Islanders</strong>
+            <em>What everyone knows, and what everyone knows that everyone knows.</em>
           </span>
-          <span class="arrow">→</span>
+          <span aria-hidden="true">→</span>
         </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Counterfeit Coin</span>
-            <span class="puzzle-subtitle">How much information can one weighing reveal?</span>
-          </span>
-          <span class="arrow">→</span>
+        <a class="puzzle-link disabled" href="#">
+          <span><strong>Counterfeit Coin</strong><em>How much information can one weighing reveal?</em></span>
+          <span aria-hidden="true">→</span>
         </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Three Gods</span>
-            <span class="puzzle-subtitle">A puzzle about truth, falsehood, randomness, and carefully chosen questions.</span>
-          </span>
-          <span class="arrow">→</span>
+        <a class="puzzle-link disabled" href="#">
+          <span><strong>Three Gods</strong><em>Truth, falsehood, randomness, and carefully chosen questions.</em></span>
+          <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
 
-    <section>
+    <section class="category">
       <h2>Probability</h2>
-      <p class="category-description">
-        Puzzles where intuition and probability quietly disagree.
-      </p>
-
+      <p>Puzzles where intuition and probability quietly disagree.</p>
       <div class="puzzle-list">
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Monty Hall Problem</span>
-            <span class="puzzle-subtitle">A puzzle about how information changes probability.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Secretary Problem</span>
-            <span class="puzzle-subtitle">How to make the best choice when the future is unavailable.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Guess 2/3 of the Average</span>
-            <span class="puzzle-subtitle">A game about reasoning through the reasoning of others.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Poisoned Wine</span>
-            <span class="puzzle-subtitle">A puzzle about encoding many possibilities into a small number of tests.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
+        <a class="puzzle-link disabled" href="#"><span><strong>Monty Hall Problem</strong><em>How information changes probability.</em></span><span aria-hidden="true">→</span></a>
+        <a class="puzzle-link disabled" href="#"><span><strong>Secretary Problem</strong><em>How to make the best choice when the future is unavailable.</em></span><span aria-hidden="true">→</span></a>
+        <a class="puzzle-link disabled" href="#"><span><strong>Guess 2/3 of the Average</strong><em>Reasoning through the reasoning of others.</em></span><span aria-hidden="true">→</span></a>
+        <a class="puzzle-link disabled" href="#"><span><strong>Poisoned Wine</strong><em>Encoding many possibilities into a small number of tests.</em></span><span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <section>
-      <h2>Strategy & Coordination</h2>
-      <p class="category-description">
-        Puzzles and games where success depends on planning, coordination, or anticipating others.
-      </p>
-
+    <section class="category">
+      <h2>Strategy &amp; Coordination</h2>
+      <p>Puzzles and games where success depends on planning, coordination, or anticipating others.</p>
       <div class="puzzle-list">
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">100 Prisoners and the Lightbulb</span>
-            <span class="puzzle-subtitle">How a group can coordinate with almost no communication.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">100 Prisoners and 50 Boxes</span>
-            <span class="puzzle-subtitle">A surprising strategy hidden inside the cycles of a permutation.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="puzzle-link" href="#">
-          <span>
-            <span class="puzzle-title">Ultimatum Game</span>
-            <span class="puzzle-subtitle">A game where equilibrium and human behavior part ways.</span>
-          </span>
-          <span class="arrow">→</span>
-        </a>
+        <a class="puzzle-link disabled" href="#"><span><strong>100 Prisoners and the Lightbulb</strong><em>How a group can coordinate with almost no communication.</em></span><span aria-hidden="true">→</span></a>
+        <a class="puzzle-link disabled" href="#"><span><strong>100 Prisoners and 50 Boxes</strong><em>A surprising strategy hidden inside permutation cycles.</em></span><span aria-hidden="true">→</span></a>
+        <a class="puzzle-link disabled" href="#"><span><strong>Ultimatum Game</strong><em>Where equilibrium and human behavior part ways.</em></span><span aria-hidden="true">→</span></a>
       </div>
     </section>
 
