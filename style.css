@@ -67,9 +67,9 @@ h2 {
   max-width: 680px;
   font-size: 1rem;
   color: var(--text);
-  background: var(--paper);
+  /*background: var(--paper);*/
   border-left: 3px solid var(--accent);
-  padding: 18px 22px;
+  padding: 6px 22px;
 }
 
 .category { margin-top: 52px; }
