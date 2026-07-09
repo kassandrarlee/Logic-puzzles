@@ -23,74 +23,61 @@
         <summary>Scenario</summary>
         <div class="detail-body">
           <p>
-            On an island, there are people with various eye colors. Everyone can see everyone else's eye color,
-            but no one can see their own. There are no mirrors, photographs, or reflective surfaces, and the islanders
-            never discuss eye color.
+            On an island, there are people with different eye colors. Everyone can see everyone else's eye color,
+            but no one can see their own. There are no mirrors or reflective surfaces, and the islanders never
+            discuss eye color.
           </p>
           <p>
-            The islanders are perfect logicians. If an islander ever deduces their own eye color with certainty,
-            they must leave the island at midnight that same day.
+            The islanders are perfect logicians. If an islander can deduce their own eye color with certainty,
+            they must leave the island at midnight that night.
           </p>
           <p>
-            One day, an outsider arrives and publicly announces: “At least one person on this island has blue eyes.”
+            One day, a visitor publicly announces:
           </p>
+          <p><strong>“At least one person on this island has blue eyes.”</strong></p>
           <p>
-            Suppose there are exactly 100 blue-eyed islanders. What happens?
+            Suppose there are exactly <strong>100 blue-eyed people</strong> on the island.
           </p>
+          <div class="question">When do the blue-eyed islanders leave?</div>
         </div>
       </details>
 
       <details>
-        <summary>Suppose there is one blue-eyed islander</summary>
+        <summary>Suppose there is one blue-eyed person</summary>
         <div class="detail-body">
           <p>
-            Begin with the smallest possible version. If there is only one blue-eyed islander, that person sees
-            no one else with blue eyes.
+            Scale the problem down. There is exactly <strong>one</strong> blue-eyed person on the island.
           </p>
           <p>
-            After the outsider says that at least one islander has blue eyes, the lone blue-eyed islander can infer
-            that they must be the one. They leave at midnight on the first day.
+            That person sees that everyone else has non-blue eyes.
           </p>
+          <div class="question">When do they leave?</div>
         </div>
       </details>
 
       <details>
-        <summary>Suppose there are two blue-eyed islanders</summary>
+        <summary>Suppose there are two blue-eyed people</summary>
         <div class="detail-body">
           <p>
-            Each blue-eyed islander sees exactly one other blue-eyed person.
+            Now suppose there are exactly <strong>two</strong> blue-eyed people on the island.
           </p>
           <p>
-            Each thinks: “If I do not have blue eyes, then that person is the only blue-eyed islander, and they will
-            leave on the first night.”
+            Each blue-eyed person sees exactly one other blue-eyed person.
           </p>
-          <p>
-            When nobody leaves on the first night, both realize the same thing: the other blue-eyed person must have
-            seen someone else with blue eyes. Therefore each concludes that they themselves have blue eyes.
-          </p>
-          <p>
-            Both leave on the second night.
-          </p>
+          <div class="question">When do they leave?</div>
         </div>
       </details>
 
       <details>
-        <summary>Suppose there are three blue-eyed islanders</summary>
+        <summary>Suppose there are three blue-eyed people</summary>
         <div class="detail-body">
           <p>
-            Each blue-eyed islander sees two blue-eyed people.
+            Now suppose there are exactly <strong>three</strong> blue-eyed people on the island.
           </p>
           <p>
-            Each can reason about what would happen if there were only two. If there were only two blue-eyed islanders,
-            those two would leave on the second night.
+            Each blue-eyed person sees exactly two other blue-eyed people.
           </p>
-          <p>
-            When nobody leaves on the second night, each realizes there must be more than two blue-eyed islanders.
-            Since each sees exactly two others, each concludes that they are the third.
-          </p>
-          <p>
-            All three leave on the third night.
-          </p>
+          <div class="question">When do they leave?</div>
         </div>
       </details>
 
@@ -98,51 +85,64 @@
         <summary>General case</summary>
         <div class="detail-body">
           <p>
-            The pattern continues. If there are <em>n</em> blue-eyed islanders, each sees <em>n − 1</em> blue-eyed
-            people and waits to see whether those people leave on night <em>n − 1</em>.
+            Suppose there are exactly <strong>n</strong> blue-eyed people on the island.
           </p>
           <p>
-            When they do not, each realizes there must be one additional blue-eyed person. Since each can account for
-            only <em>n − 1</em> others, each concludes that they themselves have blue eyes.
+            Each blue-eyed person sees exactly <strong>n − 1</strong> other blue-eyed people.
           </p>
-          <p>
-            Therefore, if there are 100 blue-eyed islanders, all 100 leave on the 100th night.
-          </p>
+          <div class="question">When do they leave?</div>
         </div>
       </details>
 
       <details>
         <summary>Complete explanation</summary>
-        <div class="detail-body">
+        <div class="detail-body answer-block">
+          <h3>One blue-eyed person</h3>
           <p>
-            The key is not that the outsider tells anyone a new visible fact. Every islander can already see that
-            blue-eyed people exist, assuming there is more than one. What changes is that the fact becomes public
-            common knowledge.
+            The single blue-eyed person sees no one else with blue eyes. After the visitor says that at least one
+            person has blue eyes, they know the statement must refer to them. They leave on the first night.
           </p>
-          <p>
-            Before the announcement, each person may know that blue-eyed people exist, but the layers of mutual
-            knowledge are not guaranteed. After the announcement, everyone knows that everyone heard the same fact,
-            and everyone knows that everyone knows it, and so on.
-          </p>
-          <p>
-            This shared starting point allows the inductive countdown to begin. The absence of departures on each
-            night becomes new information. Night 1 rules out the one-blue-eyed-person case. Night 2 rules out the
-            two-blue-eyed-person case. Night 3 rules out the three-person case, and so forth.
-          </p>
-          <div class="callout">
-            With 100 blue-eyed islanders, the first 99 nights pass without departures. On the 100th day, each blue-eyed
-            islander realizes that the only remaining possibility is that they are also blue-eyed. They all leave that night.
-          </div>
-        </div>
-      </details>
 
-      <details>
-        <summary>What this puzzle illustrates</summary>
-        <div class="detail-body">
+          <h3>Two blue-eyed people</h3>
           <p>
-            This puzzle illustrates the power of common knowledge. The announcement does not merely transmit a fact;
-            it synchronizes the islanders' reasoning. Once everyone has the same public starting point, the passage of
-            time itself becomes informative.
+            Each blue-eyed person sees exactly one blue-eyed person. Each waits through the first night, thinking:
+            if I do not have blue eyes, then the person I see is the only blue-eyed person, and they will leave
+            on the first night.
+          </p>
+          <p>
+            But the other person does not leave. So each deduces that the other blue-eyed person must be seeing
+            another blue-eyed person. Since each sees only one blue-eyed person, that additional person must be
+            themselves. Both leave on the second night.
+          </p>
+
+          <h3>Three blue-eyed people</h3>
+          <p>
+            Each blue-eyed person sees exactly two blue-eyed people. Each waits to see whether those two leave on
+            the second night, as they would if there were only two blue-eyed people.
+          </p>
+          <p>
+            When no one leaves on the second night, each deduces that the two people they see must be seeing a
+            third blue-eyed person. That third person must be themselves. All three leave on the third night.
+          </p>
+
+          <h3>n blue-eyed people</h3>
+          <p>
+            The same pattern continues. If there are <strong>n</strong> blue-eyed people, each sees
+            <strong>n − 1</strong> others and waits to see whether those <strong>n − 1</strong> people leave on
+            night <strong>n − 1</strong>.
+          </p>
+          <p>
+            When they do not, each deduces that there must be an additional blue-eyed person. Since each can account
+            for only the <strong>n − 1</strong> blue-eyed people they see, the additional blue-eyed person must be
+            themselves. Therefore, if there are <strong>100</strong> blue-eyed people, they all leave on the
+            <strong>100th night</strong>.
+          </p>
+
+          <h3>Why the visitor matters</h3>
+          <p>
+            The visitor's announcement gives the islanders a shared starting point. The information is public, so
+            every islander knows that every other islander heard it. After that, each night without departures rules
+            out one smaller case: one blue-eyed person, then two, then three, and so on.
           </p>
         </div>
       </details>
@@ -152,7 +152,5 @@
       <a class="back-link" href="../index.html">← Back to collection</a>
     </footer>
   </main>
-
-  <script src="../script.js"></script>
 </body>
 </html>
