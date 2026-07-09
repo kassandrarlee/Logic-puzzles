@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimatum Game | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Game theory · Fairness · Behavioral economics</p>
+      <h1>Ultimatum Game</h1>
+      <p class="subtitle">A game about why people do not always maximize money alone.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>Two players must divide <strong>$100</strong>.</p>
+<p>The first player (the proposer) chooses how to split the money between themselves and the second player (the responder).</p>
+<p>The responder then chooses whether to <strong>accept</strong> or <strong>reject</strong> the offer.</p>
+<ul>
+<li>If the responder accepts, both players receive the proposed amounts.</li>
+<li>If the responder rejects, <strong>both players receive nothing.</strong></li>
+</ul>
+<div class="question">What offer should the proposer make?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose You Are the Responder</summary>
+        <div class="detail-body">
+<p>The proposer offers you <strong>$1</strong> and keeps <strong>$99</strong>.</p>
+<p>If you reject the offer, both of you receive nothing.</p>
+<div class="question">Would you accept or reject the offer?</div>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>From a purely financial perspective, accepting is the rational choice. Receiving <strong>$1</strong> is better than receiving nothing.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>If the responder is interested only in maximizing the amount of money they receive, they should accept <strong>any positive offer</strong>.</p>
+<p>Knowing this, classical game theory predicts that the proposer should offer the <strong>smallest possible amount</strong> while keeping nearly everything.</p>
+<p>Real experiments consistently produce a different result.</p>
+<p>Responders frequently reject offers they consider unfair, even though doing so leaves them with nothing. Anticipating this, proposers often offer much larger amounts—commonly around <strong>40–50%</strong> of the total.</p>
+<p>The Ultimatum Game demonstrates that human decision-making is influenced by much more than financial payoff. People often value fairness, reciprocity, and the willingness to punish unfair behavior, even at a personal cost.</p>
+<p>Rather than asking what is mathematically optimal, the game reveals how social values shape economic decisions.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>

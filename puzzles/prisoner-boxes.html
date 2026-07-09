@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Prisoners and 50 Boxes | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Strategy · Permutations · Hidden structure</p>
+      <h1>100 Prisoners and 50 Boxes</h1>
+      <p class="subtitle">A puzzle about replacing random search with a path through hidden cycles.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>One hundred prisoners are each assigned a unique number from <strong>1 to 100</strong>.</p>
+<p>In another room are one hundred closed boxes, also numbered <strong>1 to 100</strong>. Inside each box is the number of one prisoner, with each number appearing exactly once.</p>
+<p>Before the challenge begins, the prisoners may meet once to agree on a strategy. After that, they may never communicate again.</p>
+<p>The prisoners enter the room <strong>one at a time</strong>. Each prisoner may open <strong>at most 50 boxes</strong> before leaving the room exactly as they found it.</p>
+<p>If <strong>every prisoner</strong> finds their own number, they are all set free.</p>
+<p>If <strong>even one prisoner</strong> fails to find their number, they are all executed.</p>
+<div class="question">Can the prisoners devise a strategy that gives them the greatest chance of success?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>The key insight is that the prisoners should not search randomly. Instead, every prisoner follows the same deterministic strategy.</p>
+<p>Each prisoner begins by opening the box with their own number.</p>
+<p>For example, Prisoner 5 opens <strong>Box 5</strong> first.</p>
+<ul>
+<li>If Box 5 contains the number <strong>32</strong>, they next open <strong>Box 32</strong>.</li>
+<li>If Box 32 contains the number <strong>81</strong>, they next open <strong>Box 81</strong>.</li>
+</ul>
+<p>They continue following this pattern until they either find their own number or have opened 50 boxes.</p>
+<p>Because every box contains exactly one number, each opened box points to exactly one new box. Eventually, this process either returns to a box that has already been opened or finds the prisoner's own number. This creates what mathematicians call a <strong>cycle</strong>.</p>
+<p>Every prisoner who begins within the same cycle will remain within that cycle by following the numbers. If a cycle contains <strong>50 or fewer boxes</strong>, every prisoner in that cycle is guaranteed to find their own number before reaching the 50-box limit.</p>
+<p>The strategy therefore succeeds whenever <strong>every cycle</strong> in the box arrangement has length <strong>50 or less</strong>. It fails only if <strong>at least one cycle</strong> is longer than 50 boxes.</p>
+<p>It is important to recognize that this strategy does <strong>not</strong> guarantee success. Because the box arrangement is random, there is always a chance that a cycle longer than 50 exists.</p>
+<p>The goal is therefore not to guarantee success, but to maximize the group's chance of success. Remarkably, following the cycles dramatically increases the probability that <strong>every prisoner succeeds together</strong> from essentially impossible under a random strategy to about <strong>31%</strong>.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>

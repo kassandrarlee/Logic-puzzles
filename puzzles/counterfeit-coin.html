@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counterfeit Coin Puzzle | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Information · Decision trees · Weighing strategies</p>
+      <h1>Counterfeit Coin Puzzle</h1>
+      <p class="subtitle">A puzzle about extracting as much information as possible from each measurement.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>You are given <strong>12 identical-looking coins</strong>.</p>
+<p>One of the coins is counterfeit. It is either <strong>slightly heavier</strong> or <strong>slightly lighter</strong> than the genuine coins, but you do not know which.</p>
+<p>You have a balance scale and may use it <strong>exactly three times</strong>.</p>
+<div class="question">Can you determine <strong>which coin is counterfeit</strong> and whether it is <strong>heavier or lighter</strong>?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Planning the First Weighing</summary>
+        <div class="detail-body">
+<p>You only have <strong>three weighings</strong>, so every weighing must provide as much information as possible.</p>
+<div class="question">How would you divide the 12 coins for your first weighing?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Interpreting the Result</summary>
+        <div class="detail-body">
+<p>No matter how you choose the first weighing, there are only three possible outcomes:</p>
+<ul>
+<li>The left side is heavier.</li>
+<li>The right side is heavier.</li>
+<li>The scale balances.</li>
+</ul>
+<div class="question">Which outcome tells you the most? What can you conclude from each possibility?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>The goal of the first weighing is <strong>not</strong> to identify the counterfeit coin immediately. Instead, it is to divide the possible scenarios into groups that can be distinguished by the remaining two weighings.</p>
+<p>A natural first weighing is to compare four coins against four coins, leaving four coins aside.</p>
+<p>For example:</p>
+<div class="sequence">1 2 3 4 &nbsp;&nbsp; vs. &nbsp;&nbsp; 5 6 7 8</div>
+<p>There are three possible outcomes.</p>
+<ul>
+<li><strong>If the scale balances</strong>, all eight weighed coins must be genuine. The counterfeit coin is therefore one of the four coins that were left aside.</li>
+<li><strong>If the scale does not balance</strong>, the counterfeit coin must be among the eight coins on the scale. However, the result alone does <strong>not</strong> tell you whether the counterfeit coin is heavier or lighter, so additional weighings are still needed.</li>
+</ul>
+<p>The remaining weighings are designed in exactly the same way. Each one is chosen to eliminate as many of the remaining possibilities as possible based on the previous result.</p>
+<p>For example, suppose the first weighing balances. You now know the counterfeit coin must be among the four coins that were not weighed. A second weighing can compare some of those four coins against genuine coins from the first weighing. Depending on whether the scale balances or tips, you can determine which subset still contains the counterfeit coin. The final weighing then distinguishes between the remaining possibilities.</p>
+<p>If the first weighing does <strong>not</strong> balance, the second weighing is designed differently. Since the counterfeit coin is known to be among the eight weighed coins—but could still be either heavier or lighter—the next comparison is chosen to separate those possibilities as efficiently as possible. The final weighing then identifies both the counterfeit coin and whether it is heavier or lighter.</p>
+<p>The reason this strategy is possible is that a balance scale provides <strong>three</strong> possible outcomes for every weighing:</p>
+<ul>
+<li>Left side is heavier.</li>
+<li>Right side is heavier.</li>
+<li>The scale balances.</li>
+</ul>
+<p>Three weighings therefore produce up to <strong>3³ = 27</strong> different outcome sequences.</p>
+<p>There are only <strong>24 possible counterfeit scenarios</strong>: each of the 12 coins could be either heavier or lighter than the others.</p>
+<p>Because <strong>27 possible outcomes</strong> are available to distinguish only <strong>24 scenarios</strong>, it is possible to design a sequence of weighings that uniquely identifies both which coin is counterfeit and whether it is heavier or lighter.</p>
+<p>The challenge is not simply finding the counterfeit coin—it is designing each weighing so that every possible outcome narrows the remaining possibilities as efficiently as possible.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>

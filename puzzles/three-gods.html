@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Three Gods Puzzle | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Logic · Self-reference · Problem decomposition</p>
+      <h1>The Three Gods Puzzle</h1>
+      <p class="subtitle">A puzzle about removing layers of uncertainty in the right order.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>Three gods—<strong>True</strong>, <strong>False</strong>, and <strong>Random</strong>—stand before you.</p>
+<ul>
+<li><strong>True</strong> always answers truthfully.</li>
+<li><strong>False</strong> always answers falsely.</li>
+<li><strong>Random</strong> answers randomly, determined by a hidden coin flip before each question.</li>
+</ul>
+<p>The gods understand English, but they answer every yes-or-no question using the words <strong>"ja"</strong> and <strong>"da."</strong> You do <strong>not</strong> know which word means yes and which means no.</p>
+<p>You may ask <strong>exactly three yes-or-no questions</strong>, each directed to a single god of your choosing.</p>
+<div class="question">Can you determine the identity of all three gods?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Hint 1 — The Language</summary>
+        <div class="detail-body">
+<div class="question">What is the <strong>first obstacle</strong> you need to overcome before you can gather any reliable information?</div>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>The first obstacle is the language itself. Since you do not know whether <strong>"ja"</strong> means yes or no, you cannot immediately interpret any answer. Your first goal is therefore to find a way to ask questions whose meaning does not depend on knowing the language.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Hint 2 — Uncertainty</summary>
+        <div class="detail-body">
+<div class="question">Once that obstacle has been addressed, what remaining uncertainty limits how much information you can trust?</div>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>One of the gods does not answer consistently. As long as that source of uncertainty remains, every answer could be misleading. Identifying a consistently reliable source of information greatly simplifies the rest of the puzzle.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Hint 3 — The Remaining Information</summary>
+        <div class="detail-body">
+<div class="question">Once those two obstacles have been removed, what information is still needed to completely solve the puzzle?</div>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>With the language ambiguity addressed and the unreliable source isolated, the remaining questions can distinguish the two consistently answering gods and resolve the final uncertainty.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>The Three Gods Puzzle is unusual because it is <strong>not</strong> built around a single insight. Instead, it requires solving several smaller problems, each of which removes one layer of uncertainty.</p>
+<p>The first challenge is the unknown language. Before any answer can be interpreted, the questions themselves must be designed so that their meaning does not depend on knowing whether <strong>"ja"</strong> means yes or no. This is accomplished using carefully constructed self-referential questions.</p>
+<p>Once the language ambiguity has been neutralized, the next priority is isolating the god whose answers cannot be trusted. Eliminating this uncertainty allows the remaining questions to be directed toward consistently answering gods, making each response much more informative.</p>
+<p>With those obstacles removed, the remaining questions distinguish the truthful and deceptive gods while resolving the final uncertainty.</p>
+<p>There is <strong>no single required sequence of questions</strong>. Several different three-question strategies have been developed, all based on the same underlying principles.</p>
+<p>Rather than memorizing one particular solution, the important insight is recognizing the order in which the obstacles are removed:</p>
+<ol><li>Neutralize the language ambiguity.</li><li>Isolate the unreliable source of information.</li><li>Use the remaining reliable answers to identify each god.</li></ol>
+<p>The elegance of the puzzle lies not in a single clever question, but in the way each question removes one obstacle and makes the next question more informative.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>

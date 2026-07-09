@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monty Hall Problem | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Probability · Information · Conditional reasoning</p>
+      <h1>Monty Hall Problem</h1>
+      <p class="subtitle">A puzzle about why opening a door does not necessarily make the remaining doors equally likely.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>You are on a game show. There are three doors.</p>
+<p>Behind one door is a car. Behind the other two doors are goats.</p>
+<p>You are asked to choose one of the three doors in an attempt to win the car.</p>
+<p>After you make your choice, the host—who knows what is behind every door—opens one of the two doors you did <strong>not</strong> choose, revealing a goat.</p>
+<p>Two unopened doors now remain: your original choice and one other door.</p>
+<p>The host offers you the chance to switch.</p>
+<div class="question">Do you stay with your original choice, or switch to the other unopened door?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>A Common Intuition</summary>
+        <div class="detail-body">
+<p>After the host opens one of the doors to reveal a goat, only two unopened doors remain.</p>
+<p>One hides the car and one hides a goat.</p>
+<p>It is tempting to conclude that each door now has a 50% chance of hiding the car, making it irrelevant whether you stay or switch.</p>
+<div class="question">Is this reasoning correct?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>The best strategy is to <strong>switch</strong>.</p>
+<p>When you first choose a door, you have a <strong>1/3</strong> chance of selecting the car and a <strong>2/3</strong> chance of selecting a goat.</p>
+<p>Rather than thinking about three individual doors, it is more helpful to think about two groups:</p>
+<ul>
+<li><strong>Your initial choice:</strong> 1/3 chance of hiding the car.</li>
+<li><strong>The two unchosen doors:</strong> 2/3 chance of hiding the car.</li>
+</ul>
+<p>The host's choice is <strong>not random</strong>. Because the host knows where the car is, they will always reveal a goat and will never accidentally reveal the prize.</p>
+<p>As a result, the <strong>2/3</strong> probability assigned to the two unchosen doors does not change when one goat door is opened. Instead, that probability becomes concentrated on the single unopened door that remains.</p>
+<p>The probabilities are therefore:</p>
+<ul>
+<li><strong>Stay:</strong> 1/3 chance of winning.</li>
+<li><strong>Switch:</strong> 2/3 chance of winning.</li>
+</ul>
+<p>The common misconception is that revealing one losing door causes the remaining unopened doors to become equally likely. In reality, probabilities do not automatically redistribute equally when new information is revealed. The host's action simply removes one impossible option while preserving the probability already associated with the unchosen doors.</p>
+<p>Switching therefore doubles your chance of winning, increasing it from <strong>1/3</strong> to <strong>2/3</strong>.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>

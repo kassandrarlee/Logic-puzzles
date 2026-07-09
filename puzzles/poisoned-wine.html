@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poisoned Wine Puzzle | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Information · Encoding · Binary outcomes</p>
+      <h1>Poisoned Wine Puzzle</h1>
+      <p class="subtitle">A puzzle about using survival patterns to encode many possibilities at once.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>A king has <strong>1,000 bottles of wine</strong>.</p>
+<p>Exactly <strong>one bottle</strong> is poisoned.</p>
+<p>The poison is colorless, odorless, and tasteless.</p>
+<p>The king has <strong>10 prisoners</strong> available to test the wine.</p>
+<p>A prisoner who drinks poisoned wine will die <strong>exactly one day later</strong>. A prisoner who does not drink poisoned wine will survive.</p>
+<p>Each prisoner may drink directly from any number of bottles, and each bottle may be sampled by any number of prisoners. <strong>Bottles may not be combined or altered before testing.</strong></p>
+<p>The king has time for <strong>only one round of testing before the wine must be served.</strong></p>
+<div class="question">How can the king identify the poisoned bottle?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose There Are Only 2 Bottles</summary>
+        <div class="detail-body">
+<p>There are only <strong>two bottles</strong>, one of which is poisoned.</p>
+<p>You have <strong>one prisoner</strong> available for testing.</p>
+<div class="question">How can you determine which bottle is poisoned after one round of testing?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Return to the Original Problem</summary>
+        <div class="detail-body">
+<p>Now return to the original puzzle.</p>
+<p>There are <strong>1,000 bottles</strong> and <strong>10 prisoners</strong>.</p>
+<p>Each prisoner has only two possible outcomes after the test: they either survive or they do not.</p>
+<div class="question">How many different outcomes can the 10 prisoners collectively produce?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>With one prisoner and two bottles, the solution is straightforward: have the prisoner drink from one bottle.</p>
+<ul>
+<li>If the prisoner survives, the other bottle must be poisoned.</li>
+<li>If the prisoner dies, the bottle they drank from was poisoned.</li>
+</ul>
+<p>One prisoner therefore provides <strong>two possible outcomes</strong>.</p>
+<p>The key insight is that each additional prisoner doubles the number of possible outcomes.</p>
+<ul>
+<li>1 prisoner → 2 outcomes</li>
+<li>2 prisoners → 4 outcomes</li>
+<li>3 prisoners → 8 outcomes</li>
+<li>...</li>
+<li>10 prisoners → 2¹⁰ = 1,024 outcomes</li>
+</ul>
+<p>Since 1,024 is greater than 1,000, there are enough unique outcomes to identify every bottle.</p>
+<p>The testing strategy is to assign each bottle a unique binary number from 0 to 999.</p>
+<p>Each prisoner represents one binary digit. A prisoner drinks from every bottle whose binary label contains a <strong>1</strong> in that position.</p>
+<p>After one day, the pattern of survivors and deaths forms a binary number, directly identifying the poisoned bottle.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>
