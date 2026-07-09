@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess 2/3 of the Average | Logic &amp; Reasoning</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nested-reveal { margin-top: 20px; border-bottom: none; border-top: 1px solid var(--line); }
+    .nested-reveal summary { padding: 16px 0 8px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .nested-reveal summary::after { font-size: 1rem; }
+    .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
+    .detail-body li { margin: 0.35rem 0; }
+    .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="puzzle-page">
+    <a class="back-link" href="../index.html">← Back to collection</a>
+    <header class="puzzle-header">
+      <p class="eyebrow">Game theory · Recursive reasoning · Theory of mind</p>
+      <h1>Guess 2/3 of the Average</h1>
+      <p class="subtitle">A game about reasoning through the reasoning of everyone else.</p>
+    </header>
+    <section class="details-list">
+      <details>
+        <summary>Scenario</summary>
+        <div class="detail-body">
+<p>Each player independently chooses a real number between <strong>0 and 100</strong>.</p>
+<p>Once every player has chosen, the numbers are averaged.</p>
+<p>The winner is the player whose number is <strong>closest to two-thirds of the average</strong>.</p>
+<p>Players may not communicate before making their choice, but everyone knows the rules of the game and knows that everyone else also knows the rules.</p>
+<div class="question">What number should you choose?</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Suppose Everyone Chose Randomly</summary>
+        <div class="detail-body">
+<p>If every player selected a number uniformly at random between <strong>0 and 100</strong>, what would you expect the average to be?</p>
+<p>What would <strong>two-thirds</strong> of that average be?</p>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>If everyone chooses randomly, the expected average is <strong>50</strong>.</p>
+<p>The target would therefore be approximately <strong>33</strong>.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Now Suppose Everyone Realizes That</summary>
+        <div class="detail-body">
+<p>If every player expects the target to be about <strong>33</strong>, they will naturally begin choosing numbers closer to <strong>33</strong> instead of <strong>50</strong>.</p>
+<p>If everyone does this, what would you expect the new average to be?</p>
+<p>What would <strong>two-thirds</strong> of that new average be?</p>
+<details class="nested-reveal"><summary>Reveal</summary><div><p>If everyone chooses around <strong>33</strong>, the average also becomes about <strong>33</strong>.</p>
+<p>The new target is therefore approximately <strong>22</strong>.</p>
+<p>This same reasoning can be repeated again and again.</p></div></details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Complete Explanation</summary>
+        <div class="detail-body">
+<p>The puzzle is solved through <strong>iterated reasoning</strong>.</p>
+<p>Every player tries to anticipate what everyone else will choose.</p>
+<p>If everyone initially chooses randomly, the expected average is <strong>50</strong>, making the target approximately <strong>33</strong>.</p>
+<p>Once every player realizes this, choosing <strong>33</strong> is no longer optimal because everyone else is also moving toward <strong>33</strong>. The expected average now becomes approximately <strong>33</strong>, making the target approximately <strong>22</strong>.</p>
+<p>The same reasoning repeats indefinitely:</p>
+<div class="sequence">50 → 33 → 22 → 15 → 10 → ...</div>
+<p>If every player is perfectly rational and believes every other player is perfectly rational, this process continues until everyone chooses <strong>0</strong>.</p>
+<p>The only stable solution is therefore <strong>0</strong>, which is the game's <strong>Nash equilibrium</strong>.</p>
+<p>In practice, however, people rarely continue this reasoning indefinitely. Most people perform only a few rounds of recursive reasoning before making a decision, so real experiments often produce winning numbers well above zero.</p>
+<p>This puzzle is therefore about much more than arithmetic. It explores <strong>recursive reasoning</strong> and <strong>theory of mind</strong>—your ability to anticipate what other people believe, what they think you believe, and how many levels of reasoning you expect them to perform.</p>
+<p>The optimal choice depends not only on mathematics, but also on your model of everyone else's thinking.</p>
+        </div>
+      </details>
+    </section>
+    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+  </main>
+</body>
+</html>
