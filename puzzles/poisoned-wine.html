@@ -12,6 +12,53 @@
     .detail-body ul { margin-top: 0; padding-left: 1.25rem; }
     .detail-body li { margin: 0.35rem 0; }
     .sequence { margin: 20px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--accent); font-weight: 600; }
+
+    .table-wrapper {
+      width: 100%;
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+
+    .code-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .code-table th,
+    .code-table td {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .code-table th {
+      background: var(--paper);
+      font-weight: 700;
+    }
+
+    .code-table th:first-child,
+    .code-table td:first-child {
+      width: 25%;
+      text-align: left;
+    }
+
+    .code-table th:nth-child(2),
+    .code-table td:nth-child(2) {
+      width: 15%;
+      font-family: monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .code-table th:nth-child(3),
+    .code-table td:nth-child(3),
+    .code-table th:nth-child(4),
+    .code-table td:nth-child(4) {
+      width: 30%;
+    }
   </style>
 </head>
 <body>
@@ -55,7 +102,8 @@
 <div class="question">If each additional prisoner also has only two possible outcomes, how much new information does each prisoner contribute?</div>
         </div>
       </details>
- <details>
+
+      <details>
         <summary>Complete Explanation</summary>
 
         <div class="detail-body">
@@ -116,38 +164,38 @@
                 <tr>
                   <th>Bottle</th>
                   <th>Code</th>
-                  <th>Prisoner 1 Drinks?</th>
-                  <th>Prisoner 2 Drinks?</th>
+                  <th>Prisoner 1</th>
+                  <th>Prisoner 2</th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
                   <td>Bottle 1</td>
-                  <td><strong>00</strong></td>
-                  <td>No</td>
-                  <td>No</td>
+                  <td>00</td>
+                  <td>—</td>
+                  <td>—</td>
                 </tr>
 
                 <tr>
                   <td>Bottle 2</td>
-                  <td><strong>01</strong></td>
-                  <td>No</td>
-                  <td>Yes</td>
+                  <td>01</td>
+                  <td>—</td>
+                  <td>✓</td>
                 </tr>
 
                 <tr>
                   <td>Bottle 3</td>
-                  <td><strong>10</strong></td>
-                  <td>Yes</td>
-                  <td>No</td>
+                  <td>10</td>
+                  <td>✓</td>
+                  <td>—</td>
                 </tr>
 
                 <tr>
                   <td>Bottle 4</td>
-                  <td><strong>11</strong></td>
-                  <td>Yes</td>
-                  <td>Yes</td>
+                  <td>11</td>
+                  <td>✓</td>
+                  <td>✓</td>
                 </tr>
               </tbody>
             </table>
@@ -236,4 +284,3 @@
   </main>
 </body>
 </html>
-     
