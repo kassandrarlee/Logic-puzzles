@@ -199,3 +199,12 @@ footer {
     gap: 6px;
   }
 }
+.linkedin-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.linkedin-link:hover,
+.linkedin-link:focus {
+    opacity: 0.75;
+}
