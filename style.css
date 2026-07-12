@@ -3,7 +3,7 @@
   --paper: #fffaf3;
   --text: #252321;
   --muted: #6f6860;
-  --line: #d8cec0;
+  --line: #c7bcad;
   --accent: #243b53;
   --accent-soft: #e8edf2;
 }
@@ -76,7 +76,7 @@ h2 {
 }
 
 .category { margin-top: 52px; }
-.category p { color: var(--muted); margin: 0 0 20px; max-width: 640px; }
+.category p { color: var(--muted); margin: 0 0 10px; max-width: 640px; }
 
 .puzzle-list { border-top: 1px solid var(--line); }
 
