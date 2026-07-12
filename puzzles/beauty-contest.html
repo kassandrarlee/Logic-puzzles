@@ -28,7 +28,7 @@
         <div class="detail-body">
 <p>Each player independently chooses a real number between <strong>0 and 100</strong>.</p>
 <p>Once every player has chosen, the numbers are averaged.</p>
-<p>The winner is the player whose number is <strong>closest to two-thirds of the average</strong>.</p>
+<p>The winner is the player whose number is <strong>closest to two-thirds of the group average</strong>.</p>
 <p>Players may not communicate before making their choice, but everyone knows the rules of the game and knows that everyone else also knows the rules.</p>
 <div class="question">What number should you choose?</div>
         </div>
@@ -70,6 +70,35 @@
 <p>In practice, however, people rarely continue this reasoning indefinitely. Most people perform only a few rounds of recursive reasoning before making a decision, so real experiments often produce winning numbers well above zero.</p>
 <p>This puzzle is therefore about much more than arithmetic. It explores <strong>recursive reasoning</strong> and <strong>theory of mind</strong>—your ability to anticipate what other people believe, what they think you believe, and how many levels of reasoning you expect them to perform.</p>
 <p>The optimal choice depends not only on mathematics, but also on your model of everyone else's thinking.</p>
+          <h3>Why 100 Is Never a Reasonable Choice</h3>
+
+<p>
+  Before any recursive reasoning begins, notice something simple.
+</p>
+
+<p>
+  The average of all chosen numbers can never be greater than
+  <strong>100</strong>. Since the winning number is always
+  <strong>two-thirds of the average</strong>, it can never be greater than:
+</p>
+
+<p>
+  <strong>(2/3) × 100 = 66⅔.</strong>
+</p>
+
+<p>
+  That means every number above 66⅔ can be eliminated immediately—no matter
+  what anyone else chooses, those numbers can never win.
+</p>
+
+<p>
+  This is the first step of the puzzle's recursive reasoning. Once every
+  player realizes that numbers above 66⅔ are impossible, everyone also knows
+  that everyone else realizes it. The largest reasonable choice becomes
+  smaller, which lowers the largest possible winning number again. Repeating
+  this reasoning indefinitely leaves only one stable choice:
+  <strong>0</strong>.
+</p>
         </div>
       </details>
     </section>
