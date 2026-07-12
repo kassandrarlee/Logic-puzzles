@@ -52,35 +52,188 @@
 <p>Now return to the original puzzle.</p>
 <p>There are <strong>1,000 bottles</strong> and <strong>10 prisoners</strong>.</p>
 <p>Each prisoner has only two possible outcomes after the test: they either survive or they do not.</p>
-<div class="question">How many different outcomes can the 10 prisoners collectively produce?</div>
+<div class="question">If each additional prisoner also has only two possible outcomes, how much new information does each prisoner contribute?</div>
         </div>
       </details>
-
-      <details>
+ <details>
         <summary>Complete Explanation</summary>
+
         <div class="detail-body">
-<p>With one prisoner and two bottles, the solution is straightforward: have the prisoner drink from one bottle.</p>
-<ul>
-<li>If the prisoner survives, the other bottle must be poisoned.</li>
-<li>If the prisoner dies, the bottle they drank from was poisoned.</li>
-</ul>
-<p>One prisoner therefore provides <strong>two possible outcomes</strong>.</p>
-<p>The key insight is that each additional prisoner doubles the number of possible outcomes.</p>
-<ul>
-<li>1 prisoner → 2 outcomes</li>
-<li>2 prisoners → 4 outcomes</li>
-<li>3 prisoners → 8 outcomes</li>
-<li>...</li>
-<li>10 prisoners → 2¹⁰ = 1,024 outcomes</li>
-</ul>
-<p>Since 1,024 is greater than 1,000, there are enough unique outcomes to identify every bottle.</p>
-<p>The testing strategy is to assign each bottle a unique binary number from 0 to 999.</p>
-<p>Each prisoner represents one binary digit. A prisoner drinks from every bottle whose binary label contains a <strong>1</strong> in that position.</p>
-<p>After one day, the pattern of survivors and deaths forms a binary number, directly identifying the poisoned bottle.</p>
+          <p>
+            With one prisoner and two bottles, the solution is straightforward:
+            have the prisoner drink from one bottle.
+          </p>
+
+          <ul>
+            <li>
+              If the prisoner survives, the other bottle must be poisoned.
+            </li>
+
+            <li>
+              If the prisoner dies, the bottle they drank from was poisoned.
+            </li>
+          </ul>
+
+          <p>
+            One prisoner therefore provides
+            <strong>two possible outcomes</strong>.
+          </p>
+
+          <p>
+            The key insight is that each additional prisoner doubles the number
+            of different outcome patterns.
+          </p>
+
+          <ul>
+            <li>1 prisoner → 2 outcomes</li>
+            <li>2 prisoners → 4 outcomes</li>
+            <li>3 prisoners → 8 outcomes</li>
+            <li>...</li>
+            <li>10 prisoners → 2¹⁰ = 1,024 outcomes</li>
+          </ul>
+
+          <p>
+            Since 1,024 is greater than 1,000, there are enough unique patterns
+            to assign one to every bottle.
+          </p>
+
+          <h3>Giving Each Bottle a Unique Fingerprint</h3>
+
+          <p>
+            Instead of assigning one prisoner to each bottle, the king gives
+            every bottle a unique identification code. That code determines
+            which prisoners drink from that bottle.
+          </p>
+
+          <p>
+            Consider a smaller example with
+            <strong>four bottles</strong> and <strong>two prisoners</strong>.
+          </p>
+
+          <div class="table-wrapper">
+            <table class="code-table">
+              <thead>
+                <tr>
+                  <th>Bottle</th>
+                  <th>Code</th>
+                  <th>Prisoner 1 Drinks?</th>
+                  <th>Prisoner 2 Drinks?</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Bottle 1</td>
+                  <td><strong>00</strong></td>
+                  <td>No</td>
+                  <td>No</td>
+                </tr>
+
+                <tr>
+                  <td>Bottle 2</td>
+                  <td><strong>01</strong></td>
+                  <td>No</td>
+                  <td>Yes</td>
+                </tr>
+
+                <tr>
+                  <td>Bottle 3</td>
+                  <td><strong>10</strong></td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+
+                <tr>
+                  <td>Bottle 4</td>
+                  <td><strong>11</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Notice that the code is also a recipe for the tasting:
+          </p>
+
+          <ul>
+            <li>
+              Prisoner 1 drinks whenever the <strong>first position</strong>
+              contains a 1.
+            </li>
+
+            <li>
+              Prisoner 2 drinks whenever the <strong>second position</strong>
+              contains a 1.
+            </li>
+          </ul>
+
+          <p>
+            Every bottle therefore has its own unique fingerprint based on which
+            prisoners drank from it.
+          </p>
+
+          <h3>Reading the Result</h3>
+
+          <p>
+            Suppose <strong>Bottle 3</strong> is poisoned. Its code is
+            <strong>10</strong>.
+          </p>
+
+          <div class="code-example">
+            <p>
+              <strong>Prisoner 1 drank from Bottle 3 and dies.</strong>
+            </p>
+
+            <p>
+              <strong>Prisoner 2 did not drink from Bottle 3 and survives.</strong>
+            </p>
+          </div>
+
+          <p>
+            Reading death as <strong>1</strong> and survival as
+            <strong>0</strong>, the resulting pattern is:
+          </p>
+
+          <div class="sequence">
+            Prisoner 1: 1 &nbsp;&nbsp; Prisoner 2: 0
+            <br />
+            Resulting code: 10
+          </div>
+
+          <p>
+            That pattern matches the code assigned to Bottle 3, so the king can
+            identify it as the poisoned bottle.
+          </p>
+
+          <p>
+            This identification system is called
+            <strong>binary notation</strong>. The reader does not need to begin
+            by understanding binary; the important idea is that every prisoner
+            contributes one position to the bottle's fingerprint.
+          </p>
+
+          <p>
+            With ten prisoners, each bottle receives a unique ten-position code.
+            A prisoner drinks from a bottle whenever their position in that
+            bottle's code contains a 1.
+          </p>
+
+          <p>
+            After one day, the pattern of deaths and survivors reproduces the
+            poisoned bottle's unique fingerprint. Since ten prisoners can create
+            1,024 different patterns, one poisoned bottle among 1,000 can be
+            identified after only one round of testing.
+          </p>
         </div>
       </details>
     </section>
-    <footer><a class="back-link" href="../index.html">← Back to collection</a></footer>
+
+    <footer>
+      <a class="back-link" href="../index.html">← Back to collection</a>
+    </footer>
   </main>
 </body>
 </html>
+     
